@@ -19,7 +19,7 @@ class CustomerController extends Controller
 
         $listCustomer = Customer::where('name', 'like', "%$search%")->orwhere('phone', 'like', "%$search%")->paginate(3);
         return view(
-            'customer.index',compact('search', 'listCustomer'));
+            'customers.index',compact('search', 'listCustomer'));
     }
 
     /**
@@ -31,7 +31,7 @@ class CustomerController extends Controller
     {
         //
         $listCustomer = Customer::all();
-        return view('customer.create',[
+        return view('customers.create',[
             'listCustomer' => $listCustomer
         ]);
     }
@@ -59,7 +59,7 @@ class CustomerController extends Controller
         $customer->avt = $new_image;
         $customer->save();
 
-        return redirect(route('customer.index'))->with('success','Add new customer success!');;
+        return redirect(route('customers.index'))->with('success','Add new customer success!');;
         // if($request->has('file_upload')){
         //     $file = $request->file_upload;
         //     $ext = $request->file_upload->extension();

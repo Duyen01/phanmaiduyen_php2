@@ -16,7 +16,7 @@
                   <a class="nav-link" href="">Sale </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('customer.create')}}">Add customer</a>
+                  <a class="nav-link" href="{{route('customers.create')}}">Add customer</a>
                 </li>                
               </ul>
                 <form class="form-inline my-2 my-lg-0">

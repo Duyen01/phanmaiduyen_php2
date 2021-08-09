@@ -3,7 +3,7 @@
 <div class="container"  style="align:center; width: 80%;">
         <div class="tieude" style="text-align:center"><h2>Add new Customer</h2></div>
         <br>
-        <form action="{{ route('customer.store') }}"  class="was-validated" enctype="multipart/form-data" method="POST" style="height:300px;">
+        <form action="{{ route('customers.store') }}"  class="was-validated" enctype="multipart/form-data" method="POST" style="height:300px;">
         @csrf
             <div class="form-group">
                 <label for="uname">Image:</label>
